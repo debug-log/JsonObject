@@ -189,9 +189,9 @@ namespace JSON
             stringBuilder.Append ("{");
             foreach (var item in jsonObject)
             {
-                if (item.GetType ().Equals (typeof (string)))
+                if (item.Value.GetType ().Equals (typeof (string)))
                 {
-                    stringBuilder.Append (string.Format ("\"{0}\":\" {1}\"", item.Key, item.Value));
+                    stringBuilder.Append (string.Format ("\"{0}\": \"{1}\"", item.Key, item.Value));
                 }
                 else
                 {
